@@ -1,0 +1,26 @@
+---
+import Github from "./logos/Github.astro";
+import Linkedin from "./logos/Linkedin.astro";
+import Logo from "./logos/Logo.astro";
+---
+
+<div class="bg-gray-900 h-20">
+    <div class="h-full w-4/6 mx-auto flex justify-between items-center gap-10 text-white">
+        <Logo />
+        <ul class="flex gap-8 font-medium">
+            <li class="hover:text-primary-green hover:scale-125 transition duration-300">
+                <a href="">About</a>
+            </li>
+            <li class="hover:text-primary-green hover:scale-125 transition duration-300" >
+                <a href="">Projects</a>
+            </li>
+            <li class="hover:text-primary-green hover:scale-125 transition duration-300" >
+                <a href="">Contact</a>
+            </li>
+        </ul>
+        <ul class="flex gap-4">
+            <Github />
+            <Linkedin />
+        </ul>
+    </div>
+</div>
