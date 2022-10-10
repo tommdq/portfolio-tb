@@ -4,16 +4,15 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			sans: ['Kalam', 'sans-serif'],
-			nova: ['Nova Slim'],
-			varela: ['Varela Round']
+			varela: ['Varela Round'],
+			overpass: ['Overpass']
 		},
 		extend: {
 			colors: {
-				darkBlue: '#064789',
-				softBlue: '#0077B6',
+				darkBlue: '#1D3354',
+				softBlue: '#467599',
 				softGreen: '#e6e2f1',
-				// softGreen: '#80ffdb',
-				hoverGreen: '#B9E28C'
+				hoverGreen: '#9ED8DB'
 			}
 		}
 	},

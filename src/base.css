@@ -1,22 +1,24 @@
 /* Base Font */
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Nova+Slim&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Overpass:wght@300&family=Varela+Round&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  html, body {
-    @apply text-softGreen bg-softBlue 
-  }
-  h1, h2, h3 {
-    @apply font-varela
-  }
-  h1 {
-    @apply text-5xl
-  }
-  h2 {
-    @apply text-3xl
-  }
-  
+	html,
+	body {
+		@apply h-full min-h-screen bg-softBlue text-white;
+	}
+	h1,
+	h2,
+	h3 {
+		@apply font-varela;
+	}
+	h1 {
+		@apply text-5xl;
+	}
+	h2 {
+		@apply text-3xl;
+	}
 }

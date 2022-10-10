@@ -14,5 +14,7 @@ module.exports = {
 			}
 		}
 	],
-	endOfLine: 'lf'
+	endOfLine: 'lf',
+	plugins: ['prettier-plugin-tailwindcss'],
+	tailwindConfig: './tailwind.config.cjs'
 }
