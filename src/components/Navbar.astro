@@ -1,26 +1,15 @@
 ---
-import Github from './logos/Github.astro'
-import Linkedin from './logos/Linkedin.astro'
-import Logo from './logos/Logo.astro'
+import AboutLogo from './logos/AboutLogo.astro'
+import ContactLogo from './logos/ContactLogo.astro'
+import HomeLogo from './logos/HomeLogo.astro'
+import ProjectsLogo from './logos/ProjectsLogo.astro'
 ---
 
-<div class='bg-darkBlue opacity-80 z-10 h-20'>
-	<div class='h-full w-4/6 mx-auto flex justify-between items-center gap-10 sm:flex'>
-		<Logo />
-		<ul class='md:flex sm:flex gap-10 font-semibold text-2xl font-overpass text-softGreen'>
-			<li class='hover:text-hoverGreen hover:scale-125 transition duration-300'>
-				<a href=''>About</a>
-			</li>
-			<li class='hover:text-hoverGreen hover:scale-125 transition duration-300'>
-				<a href=''>Projects</a>
-			</li>
-			<li class='hover:text-hoverGreen hover:scale-125 transition duration-300'>
-				<a href=''>Contact</a>
-			</li>
-		</ul>
-		<ul class='flex gap-4'>
-			<Github />
-			<Linkedin />
-		</ul>
-	</div>
-</div>
+<nav
+	class='bg-darkBlue opacity-90 z-10 h-20 fixed rounded-2xl left-1/2 transform translate-x-[-50%] flex items-center gap-4 px-8 my-4'
+>
+	<HomeLogo />
+	<AboutLogo />
+	<ProjectsLogo />
+	<ContactLogo />
+</nav>
