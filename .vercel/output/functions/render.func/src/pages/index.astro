@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/Navbar.astro'
+import Home from '../components/Home.astro'
+import About from '../components/About.astro'
+import Github from '../components/logos/Github.astro';
+import Linkedin from '../components/logos/Linkedin.astro';
+---
+
+<Layout title='Tomas Buzeta | Fullstack Developer'>
+	<Navbar />
+		<ul class='flex gap-4'>
+			<Github />
+			<Linkedin />
+		</ul>
+	<Home />
+	<About />
+</Layout>
