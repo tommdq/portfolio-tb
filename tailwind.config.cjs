@@ -14,6 +14,12 @@ module.exports = {
 				softGreen: '#e6e2f1',
 				hoverGreen: '#9ED8DB'
 			},
+			width: {
+				navIcon: '3rem'
+			},
+			height: {
+				navIcon: '3rem'
+			},
 			keyframes: {
 				wiggle: {
 					'0%': { transform: 'rotate(0deg)' },
@@ -32,7 +38,7 @@ module.exports = {
 				}
 			},
 			animation: {
-				compass: 'wiggle 2s linear'
+				compass: 'wiggle 2s linear',
 			}
 		}
 	},
