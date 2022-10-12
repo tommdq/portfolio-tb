@@ -10,15 +10,15 @@ module.exports = {
 		extend: {
 			colors: {
 				darkBlue: '#1D3354',
+				navBlue: '#21395ba8',
 				softBlue: '#467599',
 				softGreen: '#e6e2f1',
-				hoverGreen: '#9ED8DB'
 			},
 			width: {
-				navIcon: '3rem'
+				navIcon: '2.5rem'
 			},
 			height: {
-				navIcon: '3rem'
+				navIcon: '2.5rem'
 			},
 			keyframes: {
 				wiggle: {
