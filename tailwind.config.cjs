@@ -10,7 +10,7 @@ module.exports = {
 		extend: {
 			colors: {
 				darkBlue: '#1D3354',
-				navBlue: '#21395ba8',
+				navBlue: '#21395b',
 				softBlue: '#467599',
 				softGreen: '#e6e2f1',
 			},
@@ -39,6 +39,9 @@ module.exports = {
 			},
 			animation: {
 				compass: 'wiggle 2s linear',
+			},
+			screens: {
+				md: '860px'
 			}
 		}
 	},
