@@ -22,3 +22,6 @@
 		@apply text-3xl;
 	}
 }
+
+@layer components {
+}
