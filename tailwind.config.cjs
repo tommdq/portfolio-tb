@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	mode: 'jit',
 	content: ['./src/**/*.{html,js,astro}'],
 	theme: {
 		fontFamily: {
@@ -9,11 +10,11 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				darkBlue: '#1D3354',
-				navBlue: '#21395b',
-				softBlue: '#467599',
+				softBlue: '#005C7E',
+				darkBlue: '#063254',
 				softGreen: '#e6e2f1',
-				star: 'linear-gradient(90deg, #fff, transparent)'
+				navBar: '#002A39',
+				exNavBar: '#467599'
 			},
 			width: {
 				navIcon: '2.5rem'
@@ -21,9 +22,7 @@ module.exports = {
 			height: {
 				navIcon: '2.5rem'
 			},
-			boxShadow: {
-				star: '0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255,255,255,0.1), 0 0 0 20px rgba(255,255,255,1)'
-			},
+			boxShadow: {},
 			keyframes: {
 				wiggle: {
 					'0%': { transform: 'rotate(0deg)' },
@@ -40,19 +39,19 @@ module.exports = {
 					'95%': { transform: 'rotate(1094deg)' },
 					'100%': { transform: 'rotate(1076deg)' }
 				},
-				animateBg: {
-					'0%,100%': { transform: 'scale(1)' },
-					'50%': { transform: 'scale(1.2)' }
-				},
-				animateStar: {
-					'0%': { transform: 'rotate(315deg) translateX(0)' },
-					'70%': { opacity: 1},
-					'100%': { transform: 'rotate(315deg) translateX(-1000px)', opacity: 0 }
+				wobble: {
+					'0%': { transform: 'scale3d(1, 1, 1)' },
+					'30%': { transform: 'scale3d(1.25, 0.75, 1)' },
+					'40%': { transform: 'scale3d(0.75, 1.25, 1)' },
+					'50%': { transform: 'scale3d(1.15, 0.85, 1)' },
+					'65%': { transform: 'scale3d(0.95, 1.05, 1)' },
+					'75%': { transform: 'scale3d(1.05, 0.95, 1)' },
+					'100%': { transform: 'transform: scale3d(1, 1, 1)' }
 				}
 			},
 			animation: {
 				compass: 'wiggle 2s linear',
-				stars: 'animateStar 2s linear infinite'
+				wobble: 'wobble 0.9s both'
 			},
 			animationDuration: {
 				1250: '1250ms',
@@ -64,15 +63,13 @@ module.exports = {
 				3000: '3000ms'
 			},
 			animationDelay: {
-				2750: '2750ms',
+				2750: '2750ms'
 			},
 			screens: {
-				md: '860px'
+				md: '900px',
+				lg: '1150px'
 			}
 		}
 	},
-	plugins: [
-		require('tailwindcss-animation-delay'),
-		require('tailwindcss-animation')
-	]
+	plugins: [require('tailwindcss-animation-delay'), require('tailwindcss-animation')]
 }
