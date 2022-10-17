@@ -66,7 +66,7 @@ module.exports = {
 				2750: '2750ms'
 			},
 			screens: {
-				md: '900px',
+				md: '950px',
 				lg: '1150px'
 			}
 		}
