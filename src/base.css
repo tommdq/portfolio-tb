@@ -8,7 +8,7 @@
 @layer base {
 	html,
 	body {
-		@apply h-full min-h-screen w-full bg-darkBlue text-white;
+		@apply h-full min-h-screen w-full scroll-smooth bg-darkBlue text-white;
 	}
 	h1,
 	h2,
