@@ -10,14 +10,16 @@ import ProjectsLogo from './logos/ProjectsLogo.astro'
 <nav
 	class='bg-navBar backdrop-blur-lg fixed opacity-90 z-10 w-full lg:h-full lg:w-auto left-0 flex lg:flex-col lg:justify-evenly'
 >
-	<div class='flex w-full justify-evenly sm:justify-center sm:gap-14 lg:flex-col lg:gap-8 lg:h-4/5'>
+	<div
+		class='flex w-full justify-evenly h-16 sm:justify-center sm:gap-14 lg:items-center lg:flex-col lg:gap-8 lg:h-4/5'
+	>
 		<!-- TODO - Borrar comentarios -->
 		<HomeLogo />
 		<AboutLogo />
 		<ProjectsLogo />
 		<ContactLogo />
 	</div>
-	<div class='flex justify-center items-center mx-4 flex-col gap-3 lg:flex-row'>
+	<div class='flex justify-center items-center mx-4 gap-3 lg:flex-row'>
 		<Github />
 		<Linkedin />
 	</div>
