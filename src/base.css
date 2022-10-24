@@ -8,7 +8,7 @@
 @layer base {
 	html,
 	body {
-		@apply relative min-h-screen w-full scroll-smooth bg-transparent text-white;
+		@apply relative min-h-screen w-full animate-stars scroll-smooth bg-slate-900 bg-stars text-white;
 	}
 	h1,
 	h2,
@@ -24,4 +24,24 @@
 }
 
 @layer components {
+}
+
+@layer utilities {
+	.center {
+		@apply grid place-content-center;
+	}
+	.glowText::before {
+		content: attr(data-text);
+		position: absolute;
+		color: #34a958;
+		height: 0;
+		overflow: hidden;
+		transition: all;
+		transition-duration: 1s;
+		-webkit-text-stroke: 1px #34a958;
+	}
+	.glowText:hover::before {
+		height: 4rem;
+		filter: drop-shadow(0 0 25px #34a958);
+	}
 }

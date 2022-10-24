@@ -13,8 +13,8 @@ module.exports = {
 				softBlue: '#005C7E',
 				darkBlue: '#063254',
 				softGreen: '#e6e2f1',
-				navBar: '#002A39',
-				exNavBar: '#467599'
+				navBar: '#111827',
+				primaryGreen: '#34a958'
 			},
 			width: {
 				navIcon: '2.5rem'
@@ -23,6 +23,9 @@ module.exports = {
 				navIcon: '2.5rem'
 			},
 			boxShadow: {},
+			backgroundImage: {
+				stars: "url('https://www.transparenttextures.com/patterns/stardust.png')"
+			},
 			keyframes: {
 				wiggle: {
 					'0%': { transform: 'rotate(0deg)' },
@@ -47,11 +50,24 @@ module.exports = {
 					'65%': { transform: 'scale3d(0.95, 1.05, 1)' },
 					'75%': { transform: 'scale3d(1.05, 0.95, 1)' },
 					'100%': { transform: 'transform: scale3d(1, 1, 1)' }
+				},
+				stars: {
+					'0%': { 'background-position': '0 0' },
+					'100%': { 'background-position': '798px 798px' }
+				},
+				glow: {
+					'0%': { 'box-shadow': '-35px 0 60px 0 #fff' },
+					'25%': { 'box-shadow': '-35px 0 65px 0 #fff' },
+					'50%': { 'box-shadow': '-35px 0 70px 0 #fff' },
+					'75%': { 'box-shadow': '-35px 0 75px 0 #fff' },
+					'100%': { 'box-shadow': '-35px 0 80px 0 #fff' }
 				}
 			},
 			animation: {
 				compass: 'wiggle 2s linear',
-				wobble: 'wobble 0.9s both'
+				wobble: 'wobble 0.9s both',
+				stars: 'stars 30s linear infinite',
+				blink: 'glow 4s infinite alternate'
 			},
 			animationDuration: {
 				1250: '1250ms',
