@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	mode: 'jit',
-	content: ['./src/**/*.{html,js,astro}'],
+	content: ['./src/**/*.{html,js,astro,tsx}'],
 	theme: {
 		fontFamily: {
 			sans: ['Kalam', 'sans-serif'],
@@ -14,7 +14,8 @@ module.exports = {
 				darkBlue: '#063254',
 				softGreen: '#e6e2f1',
 				navBar: '#111827',
-				primaryGreen: '#34a958'
+				primaryGreen: '#34a958',
+				orbit: '#1d7dca'
 			},
 			width: {
 				navIcon: '2.5rem'
@@ -22,7 +23,9 @@ module.exports = {
 			height: {
 				navIcon: '2.5rem'
 			},
-			boxShadow: {},
+			boxShadow: {
+				sun: '0 0 120px #f1da36, 0 0 60px #f2ad00, 0 0 10px #c96800, 0 0 200px #feff8f'
+			},
 			backgroundImage: {
 				stars: "url('https://www.transparenttextures.com/patterns/stardust.png')"
 			},
@@ -61,13 +64,29 @@ module.exports = {
 					'50%': { 'box-shadow': '-35px 0 70px 0 #fff' },
 					'75%': { 'box-shadow': '-35px 0 75px 0 #fff' },
 					'100%': { 'box-shadow': '-35px 0 80px 0 #fff' }
+				},
+				fadeIn: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				spinRight: {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				spinLeft: {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(-360deg)' }
 				}
 			},
 			animation: {
 				compass: 'wiggle 2s linear',
 				wobble: 'wobble 0.9s both',
 				stars: 'stars 30s linear infinite',
-				blink: 'glow 4s infinite alternate'
+				blink: 'glow 4s infinite alternate',
+				fadeIn: 'fadeIn ease 2s',
+				orbitSpinRight: 'spinRight 15s linear infinite',
+				orbitSpinLeft: 'spinLeft 15s linear infinite',
+				rotate: 'spinRight 5s linear'
 			},
 			animationDuration: {
 				1250: '1250ms',

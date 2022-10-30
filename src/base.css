@@ -10,9 +10,11 @@
 	body {
 		@apply relative min-h-screen w-full animate-stars scroll-smooth bg-slate-900 bg-stars text-white;
 	}
+	li {
+		@apply absolute list-none;
+	}
 	h1,
-	h2,
-	h3 {
+	h2 {
 		@apply font-varela;
 	}
 	h1 {
@@ -24,12 +26,6 @@
 }
 
 @layer components {
-}
-
-@layer utilities {
-	.center {
-		@apply grid place-content-center;
-	}
 	.glowText::before {
 		content: attr(data-text);
 		position: absolute;
@@ -43,5 +39,49 @@
 	.glowText:hover::before {
 		height: 4rem;
 		filter: drop-shadow(0 0 25px #34a958);
+		height: 4rem;
+	}
+
+	.center {
+		@apply grid place-content-center;
+	}
+	.ring-center {
+		@apply z-10 grid h-20 w-20 place-items-center rounded-full bg-navBar shadow-sm shadow-slate-100;
+	}
+
+	.sun {
+		box-shadow: 0 0 120px #f1da36, 0 0 60px #f2ad00, 0 0 10px #c96800, 0 0 200px #feff8f;
+		background: radial-gradient(center, #fcf3a1 0%, #f1da36 100%);
+		background: -webkit-radial-gradient(center, ellipse cover, #fcf3a1 0%, #f1da36 100%);
+		@apply z-10 grid h-20 w-20 animate-fadeIn place-items-center rounded-full transition-all duration-500 ease-in-out;
+	}
+	.orbit-icon {
+		@apply absolute inline h-8 w-8 animate-orbitSpinLeft;
+	}
+	li > img {
+		transition: all 300ms ease-in-out;
+		transition-delay: 1s;
+	}
+	.sun:hover ~ .orbit-ring > img {
+		opacity: 0;
+		transition-delay: 0s;
+	}
+
+	.orbitWrap {
+		@apply h-[40rem];
+	}
+
+	.orbit-ring {
+		transition: height 300ms ease-in-out, width 1s ease-in-out;
+		transition-delay: 300ms, 500ms;
+		@apply animate-orbitSpinRight rounded-[50%] ring peer-hover:h-0 peer-hover:w-0;
+		/* TODO : a testear cual queda mejor */
+		/* transition: all 500ms ease-in-out; */
+	}
+}
+
+@layer utilities {
+	.center {
+		@apply grid place-content-center;
 	}
 }
