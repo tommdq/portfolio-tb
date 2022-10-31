@@ -74,9 +74,9 @@
 	.orbit-ring {
 		transition: height 300ms ease-in-out, width 1s ease-in-out;
 		transition-delay: 300ms, 500ms;
-		@apply animate-orbitSpinRight rounded-[50%] ring peer-hover:h-0 peer-hover:w-0;
-		/* TODO : a testear cual queda mejor */
-		/* transition: all 500ms ease-in-out; */
+		@apply rounded-[50%] ring peer-hover:h-0 peer-hover:w-0;
+		/* TODO -> Hacer un solo @apply cuando termines de acomodar iconos */
+		@apply animate-orbitSpinRight;
 	}
 }
 
