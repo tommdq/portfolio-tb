@@ -53,8 +53,8 @@ const OrbitSkills = () => {
 			</li>
 
 			<li className='orbit-ring h-[15rem] w-[15rem] '>
-				<img src={ICONS.HTML} alt='html5' className='orbit-icon top-16 -left-2 ' />
-				<img src={ICONS.CSS} alt='css' className='orbit-icon bottom-0 left-8' />
+				<img src={ICONS.HTML} alt='html5' className="orbit-icon top-16 -left-2 " />
+				<img src={ICONS.CSS} alt='css' className="orbit-icon bottom-0 left-8" />
 				<img src={ICONS.JS} alt='js' className='orbit-icon top-12 right-0' />
 				<img
 					src={ICONS.TYPESCRIPT}
