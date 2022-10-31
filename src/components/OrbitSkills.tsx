@@ -4,7 +4,7 @@ const OrbitSkills = () => {
 	return (
 		<ul className='grid h-[40rem] w-[40rem] place-items-center'>
 			<li className='sun peer group rotate-[-360deg] hover:rotate-0'>
-				<img src='../../assets/code.svg' alt='code' className='h-10 w-10' />
+				<img src={ICONS.HTML_TAG} alt='code' className='h-10 w-10' />
 			</li>
 
 			<li className='orbit-ring h-[39rem] w-[39rem] peer-hover:animate-none'>

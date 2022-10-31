@@ -1,3 +1,4 @@
+import htmlTag from '../../assets/code.svg'
 import html from '../../assets/skills/html5.svg'
 import css from '../../assets/skills/css.svg'
 import git from '../../assets/skills/git.svg'
@@ -18,6 +19,7 @@ import fresh from '../../assets/skills/fresh.svg'
 import vite from '../../assets/skills/vitejs.svg'
 
 export const ICONS = {
+  HTML_TAG: htmlTag,
   HTML: html,
   CSS: css,
   JS: js,
