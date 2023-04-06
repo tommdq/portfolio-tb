@@ -15,13 +15,18 @@
 	}
 	h1,
 	h2 {
-		@apply font-varela;
+		@apply select-none font-varela;
 	}
 	h1 {
 		@apply text-6xl;
 	}
 	h2 {
 		@apply text-3xl;
+	}
+
+	h3,
+	p {
+		@apply select-none;
 	}
 }
 
@@ -58,6 +63,11 @@
 	.orbit-icon {
 		@apply absolute inline h-8 w-8 animate-orbitSpinLeft;
 	}
+
+	/* Usar o borrar */
+	.glow-icon {
+		box-shadow: 0 0 1px #d2d0c7, 0 0 60px #f2ad00, 0 0 10px #c96800, 0 0 200px #feff8f;
+	}
 	li > img {
 		transition: all 300ms ease-in-out;
 		transition-delay: 1s;
@@ -74,9 +84,7 @@
 	.orbit-ring {
 		transition: height 300ms ease-in-out, width 1s ease-in-out;
 		transition-delay: 300ms, 500ms;
-		@apply rounded-[50%] ring peer-hover:h-0 peer-hover:w-0;
-		/* TODO -> Hacer un solo @apply cuando termines de acomodar iconos */
-		@apply animate-orbitSpinRight;
+		@apply animate-orbitSpinRight rounded-[50%] ring peer-hover:h-0 peer-hover:w-0;
 	}
 }
 
