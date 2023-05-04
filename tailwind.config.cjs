@@ -24,7 +24,8 @@ module.exports = {
 				navIcon: '2.5rem'
 			},
 			boxShadow: {
-				sun: '0 0 120px #f1da36, 0 0 60px #f2ad00, 0 0 10px #c96800, 0 0 200px #feff8f'
+				sun: '0 0 120px #f1da36, 0 0 60px #f2ad00, 0 0 10px #c96800, 0 0 200px #feff8f',
+				projectCard: '3px 3px 20px rgba(80, 78, 78, 0.5)'
 			},
 			backgroundImage: {
 				stars: "url('https://www.transparenttextures.com/patterns/stardust.png')"
@@ -76,6 +77,11 @@ module.exports = {
 				spinLeft: {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(-360deg)' }
+				},
+				expandAndShrink: {
+					'0%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.2)' },
+					'100%': { transform: 'scale(1)' }
 				}
 			},
 			animation: {
@@ -86,7 +92,8 @@ module.exports = {
 				fadeIn: 'fadeIn ease 2s',
 				orbitSpinRight: 'spinRight 15s linear infinite',
 				orbitSpinLeft: 'spinLeft 15s linear infinite',
-				rotate: 'spinRight 5s linear'
+				rotate: 'spinRight 5s linear',
+				expandAndShrink: 'expandAndShrink 8s ease-in-out infinite'
 			},
 			animationDuration: {
 				1250: '1250ms',

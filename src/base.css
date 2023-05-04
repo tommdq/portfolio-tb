@@ -10,11 +10,16 @@
 	body {
 		@apply relative min-h-screen w-full animate-stars scroll-smooth bg-slate-900 bg-stars text-white;
 	}
+	::-webkit-scrollbar {
+		width: 0;
+		background: transparent;
+	}
 	li {
 		@apply absolute list-none;
 	}
 	h1,
-	h2 {
+	h2,
+	h3 {
 		@apply select-none font-varela;
 	}
 	h1 {
@@ -47,19 +52,6 @@
 		height: 4rem;
 	}
 
-	.center {
-		@apply grid place-content-center;
-	}
-	.ring-center {
-		@apply z-10 grid h-20 w-20 place-items-center rounded-full bg-navBar shadow-sm shadow-slate-100;
-	}
-
-	.sun {
-		box-shadow: 0 0 120px #f1da36, 0 0 60px #f2ad00, 0 0 10px #c96800, 0 0 200px #feff8f;
-		background: radial-gradient(center, #fcf3a1 0%, #f1da36 100%);
-		background: -webkit-radial-gradient(center, ellipse cover, #fcf3a1 0%, #f1da36 100%);
-		@apply z-10 grid h-20 w-20 animate-fadeIn place-items-center rounded-full transition-all duration-500 ease-in-out;
-	}
 	.orbit-icon {
 		@apply absolute inline h-8 w-8 animate-orbitSpinLeft;
 	}
@@ -72,19 +64,51 @@
 		transition: all 300ms ease-in-out;
 		transition-delay: 1s;
 	}
-	.sun:hover ~ .orbit-ring > img {
+	/* Borrar si no se usa - Hermanos de .sun que tengan .orbit-ring -> img en hover */
+	/* .sun:hover ~ .orbit-ring > img {
 		opacity: 0;
 		transition-delay: 0s;
-	}
+	} */
 
+	.sun {
+		box-shadow: 0 0 120px #f1da36, 0 0 60px #f2ad00, 0 0 10px #c96800, 0 0 200px #feff8f;
+		background: radial-gradient(center, #fcf3a1 0%, #f1da36 100%);
+		background: -webkit-radial-gradient(center, ellipse cover, #fcf3a1 0%, #f1da36 100%);
+		@apply z-10 grid h-20 w-20 animate-fadeIn place-items-center rounded-full transition-all duration-1000 ease-in-out;
+	}
 	.orbitWrap {
 		@apply h-[40rem];
 	}
-
-	.orbit-ring {
-		transition: height 300ms ease-in-out, width 1s ease-in-out;
-		transition-delay: 300ms, 500ms;
-		@apply animate-orbitSpinRight rounded-[50%] ring peer-hover:h-0 peer-hover:w-0;
+	.ring-center {
+		@apply z-10 grid h-20 w-20 place-items-center rounded-full bg-navBar shadow-sm shadow-slate-100;
+	}
+	.orbit-ring4 {
+		transition: height 600ms ease-in-out, width 1s ease-in-out;
+		transition-delay: 600ms;
+		height: 39rem;
+		width: 39rem;
+		@apply animate-orbitSpinRight rounded-[50%] ring;
+	}
+	.orbit-ring3 {
+		transition: height 600ms ease-in-out, width 1s ease-in-out;
+		transition-delay: 500ms;
+		height: 31rem;
+		width: 31rem;
+		@apply animate-orbitSpinRight rounded-[50%] ring;
+	}
+	.orbit-ring2 {
+		transition: height 600ms ease-in-out, width 1s ease-in-out;
+		transition-delay: 300ms;
+		height: 23rem;
+		width: 23rem;
+		@apply animate-orbitSpinRight rounded-[50%] ring;
+	}
+	.orbit-ring1 {
+		transition: height 600ms ease-in-out, width 1s ease-in-out;
+		transition-delay: 100ms;
+		height: 15rem;
+		width: 15rem;
+		@apply animate-orbitSpinRight rounded-[50%] ring;
 	}
 }
 

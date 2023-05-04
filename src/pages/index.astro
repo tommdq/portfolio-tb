@@ -1,16 +1,10 @@
 ---
-import { Contact } from '../components/Contact'
-import Home from '../components/Home.astro'
 import Navbar from '../components/Navbar.astro'
-import Projects from '../components/Projects'
-import Skills from '../components/Skills'
+import Sections from '../components/sections/Sections'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title='Tomas Buzeta | Fullstack Developer'>
 	<Navbar />
-	<Home />
-	<Skills client:visible />
-	<Projects client:visible />
-	<Contact client:visible />
+	<Sections client:visible />
 </Layout>
